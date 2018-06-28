@@ -5,7 +5,7 @@ const numbers = [];
 let total = 0;
 
 do{
-  userInput=prompt('Input a number');
+  userInput=prompt('Введите число');
   if ( !(Number.isNaN(+userInput)) && (userInput!==null) ){
     numbers.push(+userInput);
   }

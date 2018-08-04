@@ -6,14 +6,19 @@ let total = 0;
 
 do{
   userInput=prompt('Введите число');
-  if ( !(Number.isNaN(+userInput)) && (userInput!==null) ){
-    numbers.push(+userInput);
-  }
-  else{
+  if ( userInput===null ){
+    alert('Прервано пользователем');
     break;
   }
+
+  if ((Number.isNaN(+userInput)) || (+(userInput)===0 && userInput !== '0')){
+    alert('Введите нормальное число');
+    continue;
+  }
+
+  numbers.push(+userInput);
 }
-while (1);
+while (true);
 
 
 for (const value of numbers){
